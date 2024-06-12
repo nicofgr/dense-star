@@ -16,7 +16,8 @@ REAL, PARAMETER :: R0 = 1.47611 ! km
 ! incluindo a conversão de m ^3 para fm ^3
 REAL, PARAMETER :: M0 = 8.9616d-4 ! GeV
 ! pressão de sacola
-REAL, PARAMETER :: B = 0.185**4 ! GeV ^4
+! REAL, PARAMETER :: B = 0.185**4 ! GeV ^4
+REAL, PARAMETER :: B = 0.155**4 ! GeV ^4
 ! densidade bariônica nuclear
 REAL, PARAMETER :: n0 = 1.2277d-3 ! GeV ^3 // n0 = 0.16 fm ^ -3
 ! raio , passo do raio
@@ -33,14 +34,15 @@ REAL :: n , nc ! GeV ^3
 11 format (1x, A, 14x, A, 14x , A, 14x, A )
 
 ! condições iniciais
-nc = 8*n0
+! nc = 8*n0
+nc = 5*n0
 n = nc
 p = 3*pi **(2/3.) * n **(4/3.) /4. - B
 e = 3*p + 4* B
 r = 0d0
 m = 0d0
 
-OPEN (10 , FILE = 'MQ-mpXrn.dat ') ! arquivo gerado pelo programa
+OPEN (10 , FILE = 'fortran.dat ') ! arquivo gerado pelo programa
 ! WRITE (10 ,11) 'r ' , 'p ' , 'm ' , 'e '
 WRITE (10 ,10) r , p *1d3 /( hbar * c) **3 , m , e *1d3 /( hbar *c ) **3 
 ! [ r ] = km , [ p ] = MeV / fm ^3 , [ m ] = Msol
