@@ -30,7 +30,7 @@ ax2.yaxis.set_minor_locator(MultipleLocator(0.2))
 ax2.plot(x,y2, 'r:')
 
 #-------------------------------------------------------
-with open('cpp.dat', 'r') as f:
+with open('output/cpp.dat', 'r') as f:
     lines = f.readlines()
     x = [float(line.split()[0]) for line in lines]
     y1 = [float(line.split()[1]) for line in lines]
