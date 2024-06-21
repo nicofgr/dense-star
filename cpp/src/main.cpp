@@ -2,7 +2,7 @@
 #include <cmath>
 #include <fstream>
 #include <iomanip>
-#include "include/dense-star.hpp"
+#include "../include/dense-star.hpp"
 
 int main(){
 
