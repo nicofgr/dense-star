@@ -52,8 +52,8 @@ PROGRAM quarkstar_massivequarks
   r = 0d0
   m = 0d0
   n = nc
-  OPEN (10, FILE = 'T0-pmXrn.dat')
-  WRITE (10, 11) 'r' , 'p' , 'm' , 'n / n0'
+  OPEN (10, FILE = 'programa2.dat')
+  !WRITE (10, 11) 'r' , 'p' , 'm' , 'n / n0'
   DO WHILE (p > 0d0 )
     WRITE (10, 10) r, p*1d3, m, n/n0 
   ! [ r ] = km , [ p ] = MeV / fm^3 , [ m] = Msol
@@ -64,7 +64,7 @@ PROGRAM quarkstar_massivequarks
     m = 4.* pi * r **2.* e (k , mf ) * dr * M0 + m ! integração da massa
     mi = m
     n = k **3/ pi **2 ! densidade bariônica
-    PRINT *, p, r, m
+    !PRINT *, p, r, m
   END DO
   CLOSE (10)
   PRINT *, r, m
@@ -77,14 +77,10 @@ SUBROUTINE newton (p, k0, mf )
   REAL :: k0, k
   REAL :: mf(3), mu(3)
 
-  PRINT *, 'NEWTON'
   DO
-    PRINT *, 'k = ', k
     k = k0 - pk(k0, mf, p ) / dpdk (k0, mf)
-    PRINT *, 'k = ', k
     IF ( abs( pk( k0 , mf , p ) ) <= 1d-11) EXIT
     k0 = k
-    PRINT *, ''
   END DO
 
 END SUBROUTINE newton
@@ -103,7 +99,7 @@ REAL FUNCTION pk(k, mf, p)
   END DO
   pk = pk /( hbar * c ) **3 ! [ pk ]: GeV ^4 -> GeV / fm ^3
   pk = pk - B - p
-  PRINT *, 'PK = ', pk
+  !PRINT *, 'PK = ', pk
 
 END FUNCTION pk
 
@@ -118,7 +114,7 @@ REAL FUNCTION dpdk (k , mf )
     dpdk = 1/( pi **2) *( mu ( f ) **3 - 2* mf ( f ) **2* mu ( f ) + mf ( f )**4/ mu ( f ) ) + dpdk
   END DO
   dpdk = dpdk /( hbar * c) **3 ! [ dpdk ] = GeV ^3 -> fm ^3
-  PRINT *, 'DPDK = ', dpdk
+  !PRINT *, 'DPDK = ', dpdk
 
 END FUNCTION dpdk
 
@@ -127,7 +123,7 @@ REAL FUNCTION e(k, mf)
   IMPLICIT NONE
   REAL :: k, mu(3), mf(3)
 
-  PRINT *, "e"
+  !PRINT *, "e"
   e = 0.
   DO f = 1 , 3
     mu(f) = sqrt(mf (f)**2 + k**2)

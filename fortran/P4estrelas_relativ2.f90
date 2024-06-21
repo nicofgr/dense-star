@@ -47,7 +47,7 @@ mu (f ) = sqrt ( mf ( f) **2 + k **2)
 END DO
 p0 = pk(k , mu , mf , 0.)
 
-OPEN (10 , FILE = 'T0-MRxp0.dat')
+OPEN (10 , FILE = 'programa4.dat')
 WRITE (10 ,11) 'p0' , 'R ' , 'M '
 
 DO WHILE ( nc / n0 < 10d0 )

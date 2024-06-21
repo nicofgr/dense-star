@@ -10,7 +10,7 @@ REAL, PARAMETER :: R0 = 1.47611 ! km
 ! M0 = 10^54/(6 ,242 d9 * Msol * c **2) ! incluindo a conversão de m ^3 para fm ^3
 REAL, PARAMETER :: M0 = 8.9616d-4 ! GeV
 ! pressão de sacola
-REAL, PARAMETER :: B = 0.185**4 ! GeV ^4
+REAL, PARAMETER :: B = 0.155**4 ! GeV ^4
 ! densidade bariônica nuclear
 REAL, PARAMETER :: n0 = 1.2277d-3 ! GeV ^3 // n0 = 0.16 fm^ -3
 ! raio , passo
@@ -25,11 +25,11 @@ REAL :: n, nc , dn = 1d-2* n0 ! GeV ^3
 10 format (E14.7, 1x, E14.7, 1x, E14.7) ! formato de impressão
 11 format (1x, A, 14x, A, 14x, A)
 ! condições iniciais
-nc = 5* n0
+nc = 2* n0
 p0 = 3* pi **(2/3.) * nc **(4/3.) /4. - B
 
-OPEN (10 , FILE = 'MQ-MRXp0.dat') ! arquivo de dados
-WRITE (10 ,11) 'p0 ', 'M ', 'R '
+OPEN (10 , FILE = 'programa3.dat') ! arquivo de dados
+!WRITE (10 ,11) 'p0 ', 'M ', 'R '
 DO WHILE ( nc / n0 < 15d0 )
 r = 0d0
 m = 0d0
