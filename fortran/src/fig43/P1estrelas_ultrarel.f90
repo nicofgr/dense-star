@@ -42,7 +42,7 @@ e = 3*p + 4* B
 r = 0d0
 m = 0d0
 
-OPEN (10 , FILE = 'fortran.dat ') ! arquivo gerado pelo programa
+OPEN (10 , FILE = 'data/Fig43_P1.dat ') ! arquivo gerado pelo programa
 ! WRITE (10 ,11) 'r ' , 'p ' , 'm ' , 'e '
 WRITE (10 ,10) r , p *1d3 /( hbar * c) **3 , m , e *1d3 /( hbar *c ) **3 
 ! [ r ] = km , [ p ] = MeV / fm ^3 , [ m ] = Msol

@@ -52,7 +52,7 @@ PROGRAM quarkstar_massivequarks
   r = 0d0
   m = 0d0
   n = nc
-  OPEN (10, FILE = 'programa2.dat')
+  OPEN (10, FILE = 'data/Fig43_P2.dat')
   !WRITE (10, 11) 'r' , 'p' , 'm' , 'n / n0'
   DO WHILE (p > 0d0 )
     WRITE (10, 10) r, p*1d3, m, n/n0 
