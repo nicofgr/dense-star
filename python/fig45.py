@@ -21,16 +21,15 @@ with open('../fortran/output/data/Fig44_P4.dat', 'r') as f:
 fig, ax1 = plt.subplots(2, figsize=(5, 9.6))
 
 ax1[0].set_title(r'\textbf{Fortran}')
-ax1[0].set_xlabel(r'$p_0$ (MeV/fm$^3$)')
+ax1[0].set_xlabel(r'$R$ (km)')
 ax1[0].set_ylabel(r'$M/M_\odot$')
-ax1[0].set_xlim([0, 500])
+ax1[0].set_xlim([8, 11])
 # ax1[0].xaxis.set_major_locator(MultipleLocator(2))
-ax1[0].xaxis.set_minor_locator(MultipleLocator(50))
-ax1[0].yaxis.set_minor_locator(MultipleLocator(0.15))
+ax1[0].xaxis.set_minor_locator(MultipleLocator(0.25))
+ax1[0].yaxis.set_minor_locator(MultipleLocator(0.1))
 ax1[0].set_ylim([1, 2.2])
-ax1[0].set_yticks([1.2, 1.5, 1.8, 2.1])
-ax1[0].plot(x, y1, 'r--')
-ax1[0].plot(a, b1, color='blue')
+ax1[0].plot(y2, y1, 'r--')
+ax1[0].plot(b2, b1, color='blue')
 
 
 # -------------------------------------------------------
@@ -56,6 +55,6 @@ ax2.yaxis.set_major_locator(MultipleLocator(0.4))
 ax2.yaxis.set_minor_locator(MultipleLocator(0.2))
 ax2.plot(x, y2, 'r:')
 
-fig.suptitle('Programa 3', fontsize=16)
+fig.suptitle('Figura 4.5', fontsize=16)
 fig.tight_layout(pad=4.0)
 plt.show()

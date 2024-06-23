@@ -28,7 +28,7 @@ REAL :: n, nc , dn = 1d-2* n0 ! GeV ^3
 nc = 2* n0
 p0 = 3* pi **(2/3.) * nc **(4/3.) /4. - B
 
-OPEN (10 , FILE = 'programa3.dat') ! arquivo de dados
+OPEN (10 , FILE = 'data/Fig44and45_P3.dat') ! arquivo de dados
 !WRITE (10 ,11) 'p0 ', 'M ', 'R '
 DO WHILE ( nc / n0 < 15d0 )
 r = 0d0
