@@ -13,3 +13,11 @@ set(EXECUTABLE_OUTPUT_PATH ../output/)
 #add_executable(Fig43_P1.out ${SOURCES})
 add_executable(Fig43_P1.out src/fig43/P1estrelas_ultrarel.f90)
 add_executable(Fig43_P2.out src/fig43/P2estrelas_relativ.f90)
+
+add_executable(Fig44and45_P3.out src/fig44and45/P3estrelas_ultrarel2.f90)
+add_executable(Fig44and45_P4.out src/fig44and45/P4estrelas_relativ2.f90)
+
+add_executable(Fig46_B1.out src/fig46/P4estrelas_relativ2_B1.f90)
+add_executable(Fig46_B2.out src/fig46/P4estrelas_relativ2_B2.f90)
+add_executable(Fig46_B3.out src/fig46/P4estrelas_relativ2_B3.f90)
+add_executable(Fig46_B4.out src/fig46/P4estrelas_relativ2_B4.f90)

@@ -130,17 +130,108 @@ dense_star.out/fast:
 .PHONY : dense_star.out/fast
 
 #=============================================================================
-# Target rules for targets named P1estrelas.out
+# Target rules for targets named Fig43_P1.out
 
 # Build rule for target.
-P1estrelas.out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 P1estrelas.out
-.PHONY : P1estrelas.out
+Fig43_P1.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig43_P1.out
+.PHONY : Fig43_P1.out
 
 # fast build rule for target.
-P1estrelas.out/fast:
-	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/P1estrelas.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/P1estrelas.out.dir/build
-.PHONY : P1estrelas.out/fast
+Fig43_P1.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig43_P1.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig43_P1.out.dir/build
+.PHONY : Fig43_P1.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig43_P2.out
+
+# Build rule for target.
+Fig43_P2.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig43_P2.out
+.PHONY : Fig43_P2.out
+
+# fast build rule for target.
+Fig43_P2.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig43_P2.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig43_P2.out.dir/build
+.PHONY : Fig43_P2.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig44and45_P3.out
+
+# Build rule for target.
+Fig44and45_P3.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig44and45_P3.out
+.PHONY : Fig44and45_P3.out
+
+# fast build rule for target.
+Fig44and45_P3.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig44and45_P3.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig44and45_P3.out.dir/build
+.PHONY : Fig44and45_P3.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig44and45_P4.out
+
+# Build rule for target.
+Fig44and45_P4.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig44and45_P4.out
+.PHONY : Fig44and45_P4.out
+
+# fast build rule for target.
+Fig44and45_P4.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig44and45_P4.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig44and45_P4.out.dir/build
+.PHONY : Fig44and45_P4.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig46_B1.out
+
+# Build rule for target.
+Fig46_B1.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig46_B1.out
+.PHONY : Fig46_B1.out
+
+# fast build rule for target.
+Fig46_B1.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B1.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B1.out.dir/build
+.PHONY : Fig46_B1.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig46_B2.out
+
+# Build rule for target.
+Fig46_B2.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig46_B2.out
+.PHONY : Fig46_B2.out
+
+# fast build rule for target.
+Fig46_B2.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B2.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B2.out.dir/build
+.PHONY : Fig46_B2.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig46_B3.out
+
+# Build rule for target.
+Fig46_B3.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig46_B3.out
+.PHONY : Fig46_B3.out
+
+# fast build rule for target.
+Fig46_B3.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B3.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B3.out.dir/build
+.PHONY : Fig46_B3.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig46_B4.out
+
+# Build rule for target.
+Fig46_B4.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig46_B4.out
+.PHONY : Fig46_B4.out
+
+# fast build rule for target.
+Fig46_B4.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B4.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig46_B4.out.dir/build
+.PHONY : Fig46_B4.out/fast
 
 # Help Target
 help:
@@ -150,7 +241,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... P1estrelas.out"
+	@echo "... Fig43_P1.out"
+	@echo "... Fig43_P2.out"
+	@echo "... Fig44and45_P3.out"
+	@echo "... Fig44and45_P4.out"
+	@echo "... Fig46_B1.out"
+	@echo "... Fig46_B2.out"
+	@echo "... Fig46_B3.out"
+	@echo "... Fig46_B4.out"
 	@echo "... dense_star.out"
 .PHONY : help
 
