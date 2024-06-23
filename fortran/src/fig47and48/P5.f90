@@ -33,6 +33,7 @@ PROGRAM hybridstar
   nc = 8*n0
   ! cálculo da densidade crítica
   ! transição de fase ocorre quando a pressão da matéria hadrônica for igual a B
+  ! ncrit = 4*n0 ! palpite
   ncrit = 4*n0 ! palpite
   CALL newton(B, ncrit)
 

@@ -259,6 +259,32 @@ Fig47and48_P1.out/fast:
 	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig47and48_P1.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig47and48_P1.out.dir/build
 .PHONY : Fig47and48_P1.out/fast
 
+#=============================================================================
+# Target rules for targets named Fig49_P3.out
+
+# Build rule for target.
+Fig49_P3.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig49_P3.out
+.PHONY : Fig49_P3.out
+
+# fast build rule for target.
+Fig49_P3.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig49_P3.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig49_P3.out.dir/build
+.PHONY : Fig49_P3.out/fast
+
+#=============================================================================
+# Target rules for targets named Fig49_P6.out
+
+# Build rule for target.
+Fig49_P6.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fig49_P6.out
+.PHONY : Fig49_P6.out
+
+# fast build rule for target.
+Fig49_P6.out/fast:
+	$(MAKE) $(MAKESILENT) -f /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig49_P6.out.dir/build.make /home/nico/repos_local/dense-star/fortran/build/CMakeFiles/Fig49_P6.out.dir/build
+.PHONY : Fig49_P6.out/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -277,6 +303,8 @@ help:
 	@echo "... Fig46_B4.out"
 	@echo "... Fig47and48_P1.out"
 	@echo "... Fig47and48_P5.out"
+	@echo "... Fig49_P3.out"
+	@echo "... Fig49_P6.out"
 	@echo "... dense_star.out"
 .PHONY : help
 

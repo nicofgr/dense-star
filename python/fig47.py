@@ -5,13 +5,13 @@ from matplotlib.ticker import AutoMinorLocator, MultipleLocator
 plt.rcParams['text.usetex'] = True
 
 data = []
-with open('../fortran/output/data/Fig47_P5.dat', 'r') as f:
+with open('../fortran/output/data/Fig47and48_P5.dat', 'r') as f:
     lines = f.readlines()
     data.append([float(line.split()[0]) for line in lines])  # R
     data.append([float(line.split()[1]) for line in lines])  # P
     data.append([float(line.split()[3]) for line in lines])  # M
 
-with open('../fortran/output/data/Fig47_P1.dat', 'r') as f:
+with open('../fortran/output/data/Fig47and48_P1.dat', 'r') as f:
     lines = f.readlines()
     data.append([float(line.split()[0]) for line in lines])  # R
     data.append([float(line.split()[1]) for line in lines])  # P

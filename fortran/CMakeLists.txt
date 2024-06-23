@@ -24,3 +24,6 @@ add_executable(Fig46_B4.out src/fig46/P4estrelas_relativ2_B4.f90)
 
 add_executable(Fig47and48_P5.out src/fig47and48/P5.f90)
 add_executable(Fig47and48_P1.out src/fig47and48/P1.f90)
+
+add_executable(Fig49_P3.out src/fig49/P3.f90)
+add_executable(Fig49_P6.out src/fig49/P6.f90)
