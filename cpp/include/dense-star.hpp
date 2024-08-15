@@ -11,12 +11,15 @@ class DenseStar{
     const long double R0 = 1.47611;
     const long double M0 = 8.9616e-4;
     const long double n0 = 1.2277e-3;  // Densidade Nuclear
-    const long double B;
+    long double B;
     long double nc;
+    unsigned int numQuarks;
   public:
-    DenseStar(double nc, double B);
+    DenseStar(double nc, double B, unsigned int numQuarks);
     void SaveDataToFile(std::string fileName);
     void UpdateRPME(long double &r, long double &p, long double &m, long double &e);
+    void setNumQuarks(unsigned int numQuarks);
+    void setBagPressure(long double B);
 
 
 };
