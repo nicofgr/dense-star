@@ -4,67 +4,56 @@ from matplotlib.ticker import AutoMinorLocator, MultipleLocator
 
 plt.rcParams['text.usetex'] = True
 
-with open('../fortran/output/data/Fig43_P2.dat', 'r') as f:
-    lines = f.readlines()
-    x = [float(line.split()[0]) for line in lines]
-    y1 = [float(line.split()[1]) for line in lines]
-    y2 = [float(line.split()[2]) for line in lines]
-
-with open('../fortran/output/data/Fig43_P1.dat', 'r') as f:
-    lines = f.readlines()
-    x2 = [float(line.split()[0]) for line in lines]
-    y3 = [float(line.split()[1]) for line in lines]
-    y4 = [float(line.split()[2]) for line in lines]
-
-fig, ax1 = plt.subplots(2, figsize=(5.4, 9.6))
-
-#ax1[0].set_title(r'\textbf{Fortran}')
-ax1[0].set_title(r'\textbf{Estrelas Estranhas (Original)}')
-ax1[0].set_xlabel(r'$r$ (km)')
-ax1[0].set_ylabel(r'$p$ (MeV/fm$^3$)')
-ax1[0].set_xlim([0, 11])
-ax1[0].xaxis.set_major_locator(MultipleLocator(2))
-ax1[0].xaxis.set_minor_locator(MultipleLocator(1))
-ax1[0].set_ylim([0, 160])
-ax1[0].yaxis.set_major_locator(MultipleLocator(40))
-ax1[0].yaxis.set_minor_locator(MultipleLocator(20))
-#ax1[0].plot(x, y1, color='blue')
-ax1[0].plot(x2, y3, 'r:')
-
-ax2 = ax1[0].twinx()
-ax2.set_ylabel(r'$m/M_\odot$')
-ax2.set_ylim([0, 2])
-ax2.yaxis.set_major_locator(MultipleLocator(0.4))
-ax2.yaxis.set_minor_locator(MultipleLocator(0.2))
-#ax2.plot(x, y2, color='blue')
-ax2.plot(x2, y4, 'r:')
-
+#fig, ax1 = plt.subplots(5, figsize=(5.4, 9.6))
+fig, ax1 = plt.subplots()
 #-------------------------------------------------------
+x = []
+titles = []
+titles.append('ud')
+titles.append('uds')
+titles.append('udsc')
+titles.append('udscb')
+titles.append('udscbt')
+dirs = []
+dirs.append('../cpp/output/ud.dat')
+dirs.append('../cpp/output/uds.dat')
+dirs.append('../cpp/output/udsc.dat')
+dirs.append('../cpp/output/udscb.dat')
+dirs.append('../cpp/output/udscbt.dat')
+cols = []
+cols.append('b')
+cols.append('g-.')
+cols.append('c--')
+cols.append('r:')
+cols.append('m')
 
-with open('../cpp/output/uds.dat', 'r') as f:
-    lines = f.readlines()
-    x = [float(line.split()[0]) for line in lines]
-    y1 = [float(line.split()[1]) for line in lines]
-    y2 = [float(line.split()[2]) for line in lines]
 
-#ax1[1].set_title(r'C++')
-ax1[1].set_title(r'Estrelas Estranhas (apenas colocando constante na eq da pressão)')
-ax1[1].set_xlabel(r'$r$ (km)')
-ax1[1].set_ylabel(r'$p$ (MeV/f$m^3$)')
-ax1[1].set_xlim([0,11])
-ax1[1].xaxis.set_major_locator(MultipleLocator(2))
-ax1[1].xaxis.set_minor_locator(MultipleLocator(1))
-ax1[1].set_ylim([0,160])
-ax1[1].plot(x,y1, 'r:')
-
-ax2 = ax1[1].twinx()
+ax1.set_title("Pressão e massa por raio para B=155MeV")
+ax1.set_xlabel(r'$r$ (km)')
+ax1.set_ylabel(r'$p$ (MeV/f$m^3$)')
+ax1.set_xlim([0,11])
+ax1.xaxis.set_major_locator(MultipleLocator(2))
+ax1.xaxis.set_minor_locator(MultipleLocator(1))
+ax1.set_ylim([0,200])
+ax2 = ax1.twinx()
 ax2.set_ylabel(r'$m/M_\odot$')
-ax2.set_ylim([0,2])
+ax2.set_ylim([0,2.1])
 ax2.yaxis.set_major_locator(MultipleLocator(0.4))
 ax2.yaxis.set_minor_locator(MultipleLocator(0.2))
-ax2.plot(x,y2, 'r:')
+
+for i in range(5):
+    x.append([])
+    with open(dirs[i], 'r') as f:
+        lines = f.readlines()
+        x[i].append([float(line.split()[0]) for line in lines])
+        x[i].append([float(line.split()[1]) for line in lines])
+        x[i].append([float(line.split()[2]) for line in lines])
+
+    ax1.plot(x[i][0],x[i][1], cols[i], label=titles[i])
+    ax2.plot(x[i][0],x[i][2], cols[i])
 
 
-fig.suptitle('Figura 4.3', fontsize=16)
-fig.tight_layout(pad = 4.0)
+#fig.suptitle(':)', fontsize=16)
+#fig.tight_layout(pad = 4.0)
+ax1.legend(loc='upper center')
 plt.show()
