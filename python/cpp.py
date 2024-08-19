@@ -28,7 +28,7 @@ cols.append('r:')
 cols.append('m')
 
 
-ax1.set_title("Pressão e massa por raio para B=155MeV")
+ax1.set_title("Pressão e massa versus raio para B=155MeV")
 ax1.set_xlabel(r'$r$ (km)')
 ax1.set_ylabel(r'$p$ (MeV/f$m^3$)')
 ax1.set_xlim([0,11])
