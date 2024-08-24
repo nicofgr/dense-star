@@ -10,9 +10,9 @@ class DenseStar{
   private:
     const long double R0 = 1.47611;
     const long double M0 = 8.9616e-4;
-    const long double n0 = 1.2277e-3;  // Densidade Nuclear
-    long double B;
-    long double nc;
+    const long double n0 = 1.2277e-3;  // Densidade Bariônica
+    long double B;  // Pressão de Sacola
+    long double nc;  // Densidade Bariônica Central
     unsigned int numQuarks;
   public:
     DenseStar(double nc, double B, unsigned int numQuarks);

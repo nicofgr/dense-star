@@ -12,37 +12,55 @@ long double mi = 1e-3;  // [mSol]
 long double r, m;  //  [km] raio, [Msol] massa
 long double p, e;  // [GeV^4]  pressao, densidade de energia
 long double n, nc;  // [GeV^3]  densidade barionica, densidade bariona central
+long double dn = 1e-2*n0;
+long double p0;
+unsigned int nmin, nmax;
     
 DenseStar::DenseStar(double nc, double B, unsigned int numQuarks) : nc(nc*n0), B(pow(B, 4)), numQuarks(numQuarks){
-    nc = 5*n0;  
-    n = nc;
-    //p = ((3*pow(pi, 2/3.)*pow(n,4/3.))/4) - this->B;
-    p = ( ((numQuarks*pow(pi, 2/3.))/4) *pow(3*n/numQuarks,4/3.)) - this->B;
-    e = 3*p + 4*this->B;
-    r = 0;
-    m = 0;
+    // Condições iniciais
+    nc = 2*n0;  
+    //nmax = 10;
+    //n = nc;
+    p0 = ( ((numQuarks*pow(pi, 2/3.))/4) *pow(3*nc/numQuarks,4/3.)) - this->B;
+    //e = 3*p + 4*this->B;
+    //r = 0;
+    //m = 0;
 }
 
 void DenseStar::SaveDataToFile(std::string fileName){
-    nc = 5*n0;  
-    n = nc;
-    p = ( ((numQuarks*pow(pi, 2/3.))/4) *pow(3*n/numQuarks,4/3.)) - this->B;
-    e = 3*p + 4*this->B;
-    r = 0;
-    m = 0;
     std::ofstream file("../output/" + fileName);
-    file << std::scientific << std::setprecision(10);
-    file << r << ' ';
-    file << (p*1e3)/pow(hbar*c,3) << ' ';
-    file << m << ' ';
-    file << (e*1e3)/pow(hbar*c,3) << '\n';
-    while(p > 0){
-        UpdateRPME(r, p, m, e);
+    do{
+        r = 0;
+        m = 0;
+        mi = 1e-3;
+
+        
+        p = ( ((numQuarks*pow(pi, 2/3.))/4) *pow(3*nc/numQuarks,4/3.)) - this->B;
+        //p = p0;
+        n = nc;
+        e = 3*p + 4*this->B;
+
+        file << std::scientific << std::setprecision(10);
+        /**
         file << r << ' ';
         file << (p*1e3)/pow(hbar*c,3) << ' ';
         file << m << ' ';
         file << (e*1e3)/pow(hbar*c,3) << '\n';
-    }
+        **/
+        while(p > 0){
+            UpdateRPME(r, p, m, e);
+            /**
+            file << r << ' ';
+            file << (p*1e3)/pow(hbar*c,3) << ' ';
+            file << m << ' ';
+            file << (e*1e3)/pow(hbar*c,3) << '\n';
+            **/
+        }
+        file << r << ' ';
+        file << (p*1e3)/pow(hbar*c,3) << ' ';
+        file << m << '\n';
+        nc += dn;
+    }while(nc/n0 < 10);
     file.close();
 }
 

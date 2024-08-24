@@ -5,7 +5,7 @@
 #include "../include/dense-star.hpp"
 
 int main(){
-
+    /**
     DenseStar star(5, 0.145, 2);
     star.SaveDataToFile("udB145.dat");
     star.setNumQuarks(3);
@@ -46,6 +46,8 @@ int main(){
     star4.SaveDataToFile("udscbB175.dat");
     star4.setNumQuarks(6);
     star4.SaveDataToFile("udscbtB175.dat");
-
+    **/
+    DenseStar star(2, 0.155, 3);
+    star.SaveDataToFile("test.dat");
     return 0;
 }
