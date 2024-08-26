@@ -47,7 +47,35 @@ int main(){
     star4.setNumQuarks(6);
     star4.SaveDataToFile("udscbtB175.dat");
     **/
-    DenseStar star(2, 0.155, 3);
-    star.SaveDataToFile("test.dat");
+    DenseStar star(2, 0.145, 2);
+    star.SaveDataToFile("P3ud145.dat");
+    star.setNumQuarks(3);
+    star.SaveDataToFile("P3uds145.dat");
+    star.setNumQuarks(4);
+    star.SaveDataToFile("P3udsc145.dat");
+    star.setNumQuarks(5);
+    star.SaveDataToFile("P3udscb145.dat");
+    star.setNumQuarks(6);
+    star.SaveDataToFile("P3udscbt145.dat");
+    DenseStar star2(2, 0.175, 2);
+    star2.SaveDataToFile("P3ud175.dat");
+    star2.setNumQuarks(3);
+    star2.SaveDataToFile("P3uds175.dat");
+    star2.setNumQuarks(4);
+    star2.SaveDataToFile("P3udsc175.dat");
+    star2.setNumQuarks(5);
+    star2.SaveDataToFile("P3udscb175.dat");
+    star2.setNumQuarks(6);
+    star2.SaveDataToFile("P3udscbt175.dat");
+    DenseStar star3(2, 0.155, 2);
+    star3.SaveDataToFile("P3ud155.dat");
+    star3.setNumQuarks(3);
+    star3.SaveDataToFile("P3uds155.dat");
+    star3.setNumQuarks(4);
+    star3.SaveDataToFile("P3udsc155.dat");
+    star3.setNumQuarks(5);
+    star3.SaveDataToFile("P3udscb155.dat");
+    star3.setNumQuarks(6);
+    star3.SaveDataToFile("P3udscbt155.dat");
     return 0;
 }

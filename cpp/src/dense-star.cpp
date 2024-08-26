@@ -29,6 +29,9 @@ DenseStar::DenseStar(double nc, double B, unsigned int numQuarks) : nc(nc*n0), B
 
 void DenseStar::SaveDataToFile(std::string fileName){
     std::ofstream file("../output/" + fileName);
+    nc = 2*n0;
+    p0 = ( ((numQuarks*pow(pi, 2/3.))/4) *pow(3*nc/numQuarks,4/3.)) - this->B;
+
     do{
         r = 0;
         m = 0;
@@ -49,17 +52,12 @@ void DenseStar::SaveDataToFile(std::string fileName){
         **/
         while(p > 0){
             UpdateRPME(r, p, m, e);
-            /**
-            file << r << ' ';
-            file << (p*1e3)/pow(hbar*c,3) << ' ';
-            file << m << ' ';
-            file << (e*1e3)/pow(hbar*c,3) << '\n';
-            **/
         }
         file << r << ' ';
-        file << (p*1e3)/pow(hbar*c,3) << ' ';
+        file << (p0*1e3)/pow(hbar*c,3) << ' ';
         file << m << '\n';
         nc += dn;
+        p0 = ( ((numQuarks*pow(pi, 2/3.))/4) *pow(3*nc/numQuarks,4/3.)) - this->B;
     }while(nc/n0 < 10);
     file.close();
 }
