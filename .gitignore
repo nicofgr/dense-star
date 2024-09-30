@@ -1,5 +1,5 @@
 *.o
-*.dat
+#*.dat
 *.out
 build
 *.ipynb_checkpoints*

@@ -57,16 +57,7 @@ int main(){
     star.SaveDataToFile("P3udscb145.dat");
     star.setNumQuarks(6);
     star.SaveDataToFile("P3udscbt145.dat");
-    DenseStar star2(2, 0.175, 2);
-    star2.SaveDataToFile("P3ud175.dat");
-    star2.setNumQuarks(3);
-    star2.SaveDataToFile("P3uds175.dat");
-    star2.setNumQuarks(4);
-    star2.SaveDataToFile("P3udsc175.dat");
-    star2.setNumQuarks(5);
-    star2.SaveDataToFile("P3udscb175.dat");
-    star2.setNumQuarks(6);
-    star2.SaveDataToFile("P3udscbt175.dat");
+    
     DenseStar star3(2, 0.155, 2);
     star3.SaveDataToFile("P3ud155.dat");
     star3.setNumQuarks(3);
@@ -77,5 +68,27 @@ int main(){
     star3.SaveDataToFile("P3udscb155.dat");
     star3.setNumQuarks(6);
     star3.SaveDataToFile("P3udscbt155.dat");
+
+    DenseStar star165(2, 0.165, 2);
+    star165.SaveDataToFile("P3ud165.dat");
+    star165.setNumQuarks(3);
+    star165.SaveDataToFile("P3uds165.dat");
+    star165.setNumQuarks(4);
+    star165.SaveDataToFile("P3udsc165.dat");
+    star165.setNumQuarks(5);
+    star165.SaveDataToFile("P3udscb165.dat");
+    star165.setNumQuarks(6);
+    star165.SaveDataToFile("P3udscbt165.dat");
+
+    DenseStar star2(2, 0.175, 2);
+    star2.SaveDataToFile("P3ud175.dat");
+    star2.setNumQuarks(3);
+    star2.SaveDataToFile("P3uds175.dat");
+    star2.setNumQuarks(4);
+    star2.SaveDataToFile("P3udsc175.dat");
+    star2.setNumQuarks(5);
+    star2.SaveDataToFile("P3udscb175.dat");
+    star2.setNumQuarks(6);
+    star2.SaveDataToFile("P3udscbt175.dat");
     return 0;
 }
